@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Karur Vysya Bank</h1>
+
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('homeSection')">Home</a></li>
+                <li><a href="#" onclick="showSection('createAccountForm')">Create Account</a></li>
+                <li><a href="#" onclick="showSection('depositForm')">Deposit</a></li>
+                <li><a href="#" onclick="showSection('withdrawForm')">Withdraw</a></li>
+                <li><a href="#" onclick="showSection('allData')">Account Info</a></li>
+            </ul>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="homeSection" class="section-container">
+            <h2 class="img">Welcome to Your Bank</h2>
+            <p>Your finances, simplified. Manage your account, deposit, withdraw, and view all data at the click of a button.</p>
+            <div class="cta-btn-container">
+                <button class="cta-btn" onclick="showSection('createAccountForm')">Create Account</button>
+            </div>
+        </section>
+        
+
+        <!-- Create Account Form -->
+        <div id="createAccountForm" class="form-container">
+            <h2>Create Account</h2>
+            <input type="text" id="username" placeholder="Username" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Password" />
+            <button onclick="createAccount()">Create Account</button>
+            <p id="createAccountMessage"></p>
+        </div>
+
+        <!-- Deposit Amount Form -->
+        <div id="depositForm" class="form-container">
+            <h2>Deposit Amount</h2>
+            <input type="number" id="depositAmount" placeholder="Amount to Deposit" />
+            <input type="password" id="depositPassword" placeholder="Password" />
+            <button onclick="depositAmount()">Deposit</button>
+            <p id="depositMessage"></p>
+        </div>
+
+        <!-- Withdraw Amount Form -->
+        <div id="withdrawForm" class="form-container">
+            <h2>Withdraw Amount</h2>
+            <input type="number" id="withdrawAmount" placeholder="Amount to Withdraw" />
+            <input type="password" id="withdrawPassword" placeholder="Password" />
+            <button onclick="withdrawAmount()">Withdraw</button>
+            <p id="withdrawMessage"></p>
+        </div>
+
+        <!-- All Data -->
+        <!-- All Data (Account Information) -->
+<div id="allData" class="form-container">
+    <h2>All Account Data</h2>
+    <div id="accountDetails">
+        <!-- Account details will be dynamically inserted here -->
+        <div class="no-accounts">No accounts found. Please create an account first.</div>
+    </div>
+</div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Banking Application. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+ 
+</body>
+</html>
